@@ -1,0 +1,52 @@
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flood Prediction Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <style>
+    #map { height: 100vh; }
+    .control-panel {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .weather-info {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.8);
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="control-panel">
+    <h3>Flood Alert System</h3>
+    <button id="report-flood">Report Flood</button>
+    <div id="route-control">
+      <input type="text" id="destination" placeholder="Enter destination">
+      <button id="get-route">Get Safe Route</button>
+    </div>
+  </div>
+  <div class="weather-info" id="weather-info">
+    <h4>Weather Data</h4>
+    <p>Loading...</p>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
