@@ -68,7 +68,7 @@ if (navigator.geolocation) {
         try {
             // Get weather data (replace with your OpenWeatherMap API key)
             const weatherResponse = await axios.get(
-                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=YOUR_OPENWEATHER_API_KEY&units=metric`
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=be6a213ee9d4f7ab2e15d3ba4a437da3&units=metric`
             );
             
             const weather = weatherResponse.data;
